@@ -1,6 +1,9 @@
 from django.shortcuts import render
-
+#视图
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Rango says thank you academic Wang")
+    return HttpResponse("Rango says hello" + "</br><a href='/rango/about/'>About</a>")
+
+def about(request):
+    return HttpResponse("Rango says here is the about page." + "<a href='/rango/'>Index</a>")
